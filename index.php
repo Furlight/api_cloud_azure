@@ -7,6 +7,8 @@
 	$connexion = pg_connect("host=$server dbname=$db user=$username password=$password");
 	$method = $_SERVER["REQUEST_METHOD"];
 
+    echo($username);
+    echo($password);
 	function getActors()
     {
         global $connexion;
