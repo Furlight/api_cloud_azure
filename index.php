@@ -4,7 +4,7 @@
 	$username = $_ENV['user'];
 	$password = $_ENV['password'];
 	$db = "mydb";
-	$connexion = pg_connect("host=$server dbname=$db user=$username password=$password");
+	$connexion = pg_connect("host=$server dbname=$db user=$username@houssais-psqlserver password=$password");
 	$method = $_SERVER["REQUEST_METHOD"];
 
 	function getActors()
