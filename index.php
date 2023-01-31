@@ -30,9 +30,11 @@
 	{
 		case 'GET':
             getActors();
+            pg_close($connexion);
 			break;
 		default:
 			header("HTTP/1.0 405 Method Not Allowed");
+            pg_close($connexion);
 			break;  
 	}
 ?>
