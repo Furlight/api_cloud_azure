@@ -22,7 +22,7 @@
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Headers: *");
         header('Content-Type: application/json');
-        echo json_encode($response, JSON_PRETTY_PRINT);
+        return json_encode($response, JSON_PRETTY_PRINT);
     }
 	
     // Différentes routes récupérées
