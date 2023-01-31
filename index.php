@@ -17,12 +17,12 @@
         }
         $response = array();
         while ($row = pg_fetch_row($result)) {
-            $response[] = array("Id" => $row[0], "Username" => $row[1], "Email" => $row[2]);
+            $response[] = array("id" => $row[0], "username" => $row[1], "email" => $row[2]);
         }
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Headers: *");
         header('Content-Type: application/json');
-        return json_encode($response, JSON_PRETTY_PRINT);
+        echo json_encode($response);
     }
 	
     // Différentes routes récupérées
